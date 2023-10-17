@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lelabdeux.Views.MenuPage" Title="Menu">
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+            <StackLayout BackgroundColor="#518faa" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
+                <Image Aspect="AspectFit" Margin="0, 35, 0, 0" Source="lab_logo.png" HeightRequest="100" />
+                <Label Margin="0, 10, 0, 20"  TextColor="White" HorizontalTextAlignment="Center" Text="LE LAB" FontSize="30">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>HelveticaNeue-Thin</OnPlatform.iOS>
+                            <OnPlatform.Android>HelveticaNeue-Thin.ttf#HelveticaNeue-Thin</OnPlatform.Android>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <Image Aspect="AspectFill" Source="lab_separator.png"/>
+            <StackLayout Margin="30, 0" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                <Button Margin="0, 20, 0, 0" Style="{StaticResource boutonLabStyle}" BackgroundColor="#c1ab24" Text="COMPTEUR" Clicked="CounterButtonClicked" HorizontalOptions="FillAndExpand"/>
+                <Button Margin="0, 10, 0, 0" Style="{StaticResource boutonLabStyle}" BackgroundColor="#a4881c" Text="TABS" Clicked="TabsButtonClicked" HorizontalOptions="FillAndExpand"/>
+                <Button Margin="0, 10, 0, 0" Style="{StaticResource boutonLabStyle}" BackgroundColor="#c60e3c" Text="LISTE" Clicked="ListeButtonClicked" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

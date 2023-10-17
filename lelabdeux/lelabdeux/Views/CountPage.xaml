@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Compteur"
+             x:Class="lelabdeux.Views.CountPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="0" Margin="0, 0" BackgroundColor="#518faa" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+                <Label Margin="0, 40" x:Name="countLabel" HorizontalTextAlignment="Center" TextColor="White" Text="0" FontSize="80" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>HelveticaNeue-Thin</OnPlatform.iOS>
+                            <OnPlatform.Android>HelveticaNeue-Thin.ttf#HelveticaNeue-Thin</OnPlatform.Android>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <Image Aspect="AspectFill" Source="lab_separator.png"/>
+            <StackLayout Margin="30, 0"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Frame HasShadow="False" VerticalOptions="FillAndExpand">
+                    <Button Style="{StaticResource boutonLabStyle}" Text="Compter" Margin="30, 0, 30, 0" Clicked="CountButtonClick" VerticalOptions="Center" />
+                </Frame>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
